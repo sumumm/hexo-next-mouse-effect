@@ -1,6 +1,6 @@
 {
   "name": "hexo-next-mouse-effect",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The cursor effects of sumu",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qidaink/hexo-qidaink-cursor_effects.git"
+    "url": "git+https://github.com/sumumm/hexo-next-mouse-effect.git"
   },
   "keywords": [
     "cursor",
