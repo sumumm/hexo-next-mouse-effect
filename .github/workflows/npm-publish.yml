@@ -1,0 +1,35 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Node.js Package
+
+on:
+  push:
+    branches: [master]
+  release:
+    types: [created]
+
+jobs:
+  sumu-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3  # 拉取分支，这里就是 git@github.com:sumumm/hexo-next-mouse-effect.git 的内容了
+      - name: 打印当前路径
+        run: |
+          pwd
+          ls -alh
+
+  publish-npm:
+    needs: sumu-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS}} # 有了个人令牌才能免除登录
+        
