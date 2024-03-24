@@ -17,11 +17,14 @@ npm install hexo-next-mouse-effect
 
 ```yaml
 cursor:
-  enable: true
+  enable: true       # 总开关
+  click_ena: true    # 鼠标点击效果控制开关
   click: fireWorks   # 鼠标点击效果 fireWorks | showLove | showText
   fireWorks_cdnPath: "https://cdn.jsdelivr.net/npm/hexo-next-mouse-effect@latest/click/fireWorks.js"
   showLove_cdnPath: "https://cdn.jsdelivr.net/npm/hexo-next-mouse-effect@latest/click/showLove.js"
   showText_cdnPath: "https://cdn.jsdelivr.net/npm/hexo-next-mouse-effect@latest/click/showText.js"
+  
+  move_ena: true     # 鼠标移动效果控制开关
   move: fairyDust    # 鼠标移动效果 bubble | emoji | fairyDust | ghost | snowflake | springyEmoji
   bubble_cdnPath: "https://cdn.jsdelivr.net/npm/hexo-next-mouse-effect@latest/move/bubbleCursor.js"
   emoji_cdnPath: "https://cdn.jsdelivr.net/npm/hexo-next-mouse-effect@latest/move/emojiCursor.js"
